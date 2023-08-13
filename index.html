@@ -15,29 +15,33 @@
     <header class="header-cont">
         <h3 class="envios-gratis">Envios gratis con la compra minima de $10000</h3>
         <nav class="nav-tools" >
-            <img src="Imagenes/Iconos/menu-burger.png" alt="Menu desplegable" class="icon">
-            <a href="index.html">
+            <div class="dropdown">
+                <button class="btn btn-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="Imagenes/Iconos/menu-burger.png" alt="Boton Hamburguesa" class="hamburger-button">
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="index.html">Inicio</a></li>
+                    <li><a class="dropdown-item" href="Views/productos.html">Productos</a></li>
+                    <li><a class="dropdown-item" href="Views/acerca-de.html">Acerca de</a></li>
+                    <li><a class="dropdown-item" href="Views/contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <a href="index.html" class="nav-tools__logo">
                 <img src="Imagenes/Iconos/iconogrupoumsa1.ico" alt="Logo Grupo Umsa" class="">
             </a>
-            <img src="Imagenes/Iconos/carro-de-la-carretilla.png" alt="Carrito de compras" class="icon">
-
-            <ul class="nav-list">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html" target="_blank">Productos</a></li>
-                <li><a href="acerca-de.html" target="_blank">Acerca de</a></li>
-                <li><a href="contacto.html" target="_blank">Contacto</a></li>
-            </ul>
-
+            <img src="Imagenes/Iconos/carro-de-la-carretilla.png" alt="Carrito de compras" class="nav-tools__carrito-compras">
+            
         </nav>
     </header>
     <main id="main-container">
         <section id="section-welcome-page">
             <img src="Imagenes/Mas Categorias/banner-cobra.png" alt="Banner Grupo Umsa" class="section-welcome-page__banner">
-            <p class="section-welcome-page__text">¡Tu destino para encontrar las mejores ofertas en Deportes, Acc. Vehiculos y mucho mas!</p>
+            <p class="section-welcome-page__text">
+                ¡Tu destino para encontrar las mejores ofertas en Deportes, Acc. Vehiculos y mucho mas!
+            </p>
             <div class="section-welcome-page__container-button">
                 <input type="button" value="CONTACTO MAYORISTA" class="section-welcome-page__container-button button">
             </div>
-            
         </section>
         <section id="section-category">
             <div class="category__menu">
@@ -157,7 +161,7 @@
             </div>
             <div class="container-footer__social-media">
                 <a href="https://api.whatsapp.com/send?phone=541126780335&text=%C2%A1Hola%21+Estoy+en+la+tienda+DISTRIBUIDORA+GRUPO+UMSA+y+quiero+pedir+m%C3%A1s+informaci%C3%B3n." target="_blank">
-                    <img src="/Imagenes/Iconos/whatsapp.png" alt="Whatsapp" class="container-footer__social-media logo">
+                    <img src="Imagenes/Iconos/whatsapp.png" alt="Whatsapp" class="container-footer__social-media logo">
                 </a>
                 <a href="https://www.instagram.com/distribuidora.grupoumsa/" target="_blank">
                     <img src="Imagenes/Iconos/instagram.png" alt="Instagram" class="container-footer__social-media logo">
@@ -177,6 +181,6 @@
             </div>
         </div>
     </footer>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

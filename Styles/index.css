@@ -10,6 +10,7 @@ img {
 
 
 
+
 /*HEADER*/
 
 
@@ -34,23 +35,33 @@ nav.nav-tools {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+    justify-content: center;
     justify-items: center;
     align-items: center;
 }
 
-nav.nav-tools img.icon {
-    width: 25px;
-    height: 25px;
+.nav-tools .dropdown button.dropdown-toggle {
+    text-decoration: none;
 }
 
-nav.nav-tools a img{
-    width: 100px;
+.nav-tools .dropdown {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-tools .dropdown .hamburger-button {
+    width: 30px;
+    height: 30px;
+}
+
+.nav-tools__carrito-compras {
+    display: flex;
+    width: 30px;
+    height: 30px;
 }
 
 
-nav.nav-tools .nav-list {
-    display: none;
-}
+
 
 
 
@@ -58,6 +69,7 @@ nav.nav-tools .nav-list {
 section#section-welcome-page{
     display: flex;
     flex-direction: column;
+    margin-bottom: 0;
 }
 
 .section-welcome-page__banner{
