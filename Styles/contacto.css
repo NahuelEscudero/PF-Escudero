@@ -1,4 +1,3 @@
-.container-formulario {
-    display: flex;
-    justify-content: center;
+body.container {
+    background-color: #DFD5D5;
 }
