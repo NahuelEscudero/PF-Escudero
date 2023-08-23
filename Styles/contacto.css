@@ -1,3 +1,85 @@
-body.container {
-    background-color: #DFD5D5;
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+body.container-fluid {
+    background-color: #f5f2f2;
+}
+
+
+section.container-contacto {
+
+}
+
+.contact-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 992px) {
+    .contact-title {
+        justify-content: start;
+        margin-left: 30px;
+    }
+}
+
+.contact-title__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: #E92D2D;
+    font-size: 35px;
+}
+
+.horarios-de-atencion > *:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+.horarios-de-atencion__tittle {
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 10px;
+    margin-bottom: 40px;
+    font-weight: 900;
+
+}
+
+.horarios-de-atencion__text {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+
+
+
+section#location {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h2.location__tittle {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    margin-left: 10px;
+}
+
+
+
+.container-formulario {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: #f5f2f2;
+    color: #000000;
 }

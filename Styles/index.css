@@ -1,4 +1,4 @@
-*, *::before, *::after {
+*, *:before, *:after {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -17,6 +17,7 @@ img {
 .envios-gratis {
     display: flex;
     width: 100%;
+    margin: 0;
     padding-top: 3px;
     padding-bottom: 3px;
     background-color: #E92D2D;
@@ -33,31 +34,121 @@ img {
 
 nav.nav-tools {
     display: grid;
+    grid-template-areas: 
+    "burger logo carrito";
     grid-template-columns: 1fr 1fr 1fr;
-    width: 100%;
-    justify-content: center;
+    width: 100%; 
     justify-items: center;
     align-items: center;
 }
 
-.nav-tools .dropdown button.dropdown-toggle {
-    text-decoration: none;
+@media (min-width: 992px) {
+    nav.nav-tools {
+        grid-template-areas: 
+        "logo buscador carrito"
+        "logo menu carrito";
+        grid-template-columns: 2fr 9fr 1fr;
+        grid-template-rows: auto;
+        
+    }
 }
 
-.nav-tools .dropdown {
+
+div.dropdown {
     display: flex;
-    justify-content: center;
+    grid-area: "burger";
 }
 
-.nav-tools .dropdown .hamburger-button {
+@media (min-width: 992px){
+    div.dropdown {
+        display: none;
+    }
+}
+
+div.dropdown img.hamburger-button {
     width: 30px;
     height: 30px;
+}
+
+div.nav-tools__logo {
+    display: flex;
+    grid-area: "logo";
+}
+
+@media (min-width: 992px) {
+    div.nav-tools__logo {
+        justify-self: start;
+    }
+}
+
+div.nav-tools__logo a.nav-tools__logo-link {
+    display: flex;
+    width: auto;
+}
+
+
+div.nav-tools__logo a.nav-tools__logo-link img.nav-tools__logo-link-img {
+    width: 150px;
+}
+
+div.nav-tools__barra-search {
+    display: none;
+    grid-area: "buscador";
+}
+
+@media (min-width: 992px) {
+    div.nav-tools__barra-search {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+div.nav-tools__list {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    div.nav-tools__list {
+        display: flex;
+        flex-direction: row;
+        grid-area: "menu";
+    }
+}
+
+div.nav-tools__list ul.nav-tools__list-desktop{
+    display: none;
+}
+
+@media (min-width: 992px) {
+    div.nav-tools__list ul.nav-tools__list-desktop {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    div.nav-tools__list ul.nav-tools__list-desktop li a {
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 800;
+        color: #000000;
+    }
 }
 
 .nav-tools__carrito-compras {
     display: flex;
     width: 30px;
     height: 30px;
+    grid-area: "carrito";
+}
+
+@media (min-width: 992px) {
+    div.nav-tools__carrito-compras {
+        
+    }
 }
 
 
@@ -249,7 +340,6 @@ section#section-category {
 .container-footer {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
     background-color: #777395;
     font-family: 'Roboto', sans-serif;
     color: #FFFFFF;
