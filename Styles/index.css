@@ -56,7 +56,7 @@ nav.nav-tools {
 
 div.dropdown {
     display: flex;
-    grid-area: "burger";
+    grid-area: burger;
 }
 
 @media (min-width: 992px){
@@ -72,7 +72,7 @@ div.dropdown img.hamburger-button {
 
 div.nav-tools__logo {
     display: flex;
-    grid-area: "logo";
+    grid-area: logo;
 }
 
 @media (min-width: 992px) {
@@ -93,7 +93,7 @@ div.nav-tools__logo a.nav-tools__logo-link img.nav-tools__logo-link-img {
 
 div.nav-tools__barra-search {
     display: none;
-    grid-area: "buscador";
+    grid-area: buscador;
 }
 
 @media (min-width: 992px) {
@@ -112,7 +112,7 @@ div.nav-tools__list {
     div.nav-tools__list {
         display: flex;
         flex-direction: row;
-        grid-area: "menu";
+        grid-area: menu;
     }
 }
 
@@ -142,7 +142,7 @@ div.nav-tools__list ul.nav-tools__list-desktop{
     display: flex;
     width: 30px;
     height: 30px;
-    grid-area: "carrito";
+    grid-area: carrito;
 }
 
 @media (min-width: 992px) {
