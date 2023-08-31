@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora Grupo UMSA</title>
     <link rel="icon" href="Imagenes/Iconos/iconogrupoumsa1.ico">
-    <link rel="stylesheet" type="text/css" href="Styles/index.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Roboto:wght@300;400;500;700&family=Victor+Mono:wght@100&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Victor+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
@@ -36,7 +37,9 @@
 
             <div class="nav-tools__barra-search">
                 <input type="text" class="search-input" placeholder="Busca tu producto...">
-                <button class="search-button">Buscar</button>
+                <button class="search-button">
+                    <img src="Imagenes/Iconos/busqueda.png" alt="Buscar">
+                </button>
             </div>
 
             <div class="nav-tools__list">
@@ -49,7 +52,7 @@
             </div>
 
             <div class="nav-tools__carrito-compras">
-                <img src="Imagenes/Iconos/carro-de-la-carretilla.png" alt="Carrito de compras" class="nav-tools__carrito-compras-img">
+                <img src="Imagenes/Iconos/carrito-de-compras.png" alt="Carrito de compras" class="nav-tools__carrito-compras-img">
             </div>
         </nav>
     </header>
@@ -60,15 +63,31 @@
             <p class="section-welcome-page__text">
                 ¡Tu destino para encontrar las mejores ofertas en Deportes, Acc. Vehiculos y mucho mas!
             </p>
-            <div class="section-welcome-page__container-button">
-                <input type="button" value="CONTACTO MAYORISTA" class="section-welcome-page__container-button button">
+            <div class="section-welcome-page__mayorista">
+                <div class="section-welcome-page__mayorista-text">
+                    <p>Queres revender nuestros productos? ¡Contactate con nosotros!
+                    </p>
+                </div>
+                <div class="section-welcome-page__mayorista-button">
+                    <a href="Views/contacto.html#cont-form">
+                        <input type="button" value="CONTACTO MAYORISTA" class="section-welcome-page__container-button button">
+                    </a>
+                </div>
             </div>
         </section>
         <section id="section-category">
-            <div class="category__menu">
+            <!-- <div class="category__menu">
                 <img src="Imagenes/Iconos/menu-burger.png" alt="Menu desplegable" class="category__menu img">
                 <h4 class="category__menu tittle">CATEGORIAS</h4>
-            </div>
+            </div> -->
+            <div class="btn-group dropup">
+                <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropup
+                </button>
+                <ul class="dropdown-menu">
+                  <!-- Dropdown menu links -->
+                </ul>
+              </div>
             <h3 class="category__tittle">Articulos Deportivos y Fitness</h3>
             <div class="container-articulos">
                 <div class="container-articulos__imagen-y-titulo">
