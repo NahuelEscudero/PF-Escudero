@@ -215,11 +215,11 @@ section#section-category {
 }
 section#section-category div.category__menu {
   display: flex;
+  width: 300px;
   grid-area: "menu";
-  justify-self: center;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  width: max-content;
+  flex-direction: row;
   align-items: center;
   background-color: #DFD5D5;
   gap: 10px;
@@ -234,6 +234,7 @@ section#section-category div.category__menu h4.tittle {
   font-size: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
+  margin: 0;
 }
 section#section-category h3.category__tittle {
   text-align: center;
@@ -243,47 +244,42 @@ section#section-category h3.category__tittle {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-
-.container-articulos {
+section#section-category div.container-articulos {
   display: flex;
   grid-area: "cont-prod";
   justify-self: center;
   flex-direction: column;
-  width: 200px;
+  width: 280px;
   justify-content: center;
   align-items: center;
   gap: 80px;
   border-radius: 20px;
 }
-
-.container-articulos__imagen-y-titulo {
+section#section-category div.container-articulos div.container-articulos__imagen-y-titulo {
   display: flex;
   flex-direction: column;
   width: 100%;
+  height: 400px;
   align-items: center;
   gap: 20px;
   border-radius: 20px;
   background-color: #FFFFFF;
 }
-
-.container-articulos__imagen-y-titulo .imagen {
-  width: 150px;
-  height: 150px;
+section#section-category div.container-articulos div.container-articulos__imagen-y-titulo img.imagen {
+  width: 248px;
+  height: 250px;
   padding-top: 40px;
 }
-
-.container-articulos__imagen-y-titulo .nombre-producto__parrafo {
+section#section-category div.container-articulos div.container-articulos__imagen-y-titulo p.nombre-producto__parrafo {
   font-family: "Roboto", sans-serif;
   font-weight: 900;
   font-size: 15px;
   text-align: center;
-  padding-bottom: 40px;
 }
-
-.container-articulos__background-color-red {
-  display: block;
-  background-color: #E92D2D;
-  height: 100px;
+@media (min-width: 992px) {
+  section#section-category .container-articulos {
+    flex-direction: row;
+  }
 }
 
 /*SECCION INFORMACION*/
