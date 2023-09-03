@@ -10,11 +10,15 @@ img {
 
 /*VARIABLES*/
 /*HEADER*/
-header.header-cont {
+header#header-cont {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
   width: 100%;
 }
-header.header-cont h3.envios-gratis {
+header#header-cont h3.envios-gratis {
   display: flex;
+  flex: 5%;
   width: 100%;
   margin: 0;
   padding-top: 3px;
@@ -26,8 +30,9 @@ header.header-cont h3.envios-gratis {
   font-size: 15px;
   font-weight: 300;
 }
-header.header-cont nav.nav-tools {
+header#header-cont nav.nav-tools {
   display: grid;
+  flex: 20%;
   grid-template-areas: "burger logo carrito";
   grid-template-columns: 1fr 1fr 1fr;
   width: 100%;
@@ -35,11 +40,28 @@ header.header-cont nav.nav-tools {
   align-items: center;
 }
 @media (min-width: 992px) {
-  header.header-cont nav.nav-tools {
+  header#header-cont nav.nav-tools {
     grid-template-areas: "logo buscador carrito" "logo menu carrito";
     grid-template-columns: 2fr 9fr 1fr;
     grid-template-rows: auto;
   }
+}
+header#header-cont p.nav-tools-page__text {
+  display: flex;
+  flex: 10%;
+  padding: 10px;
+  margin-bottom: 0;
+  background-color: #EEEDFF;
+  color: #C31821;
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  justify-content: center;
+  text-align: center;
+}
+header#header-cont img.nav-tools-page__banner {
+  width: 100%;
+  flex: 65%;
 }
 
 /*NAVEGADOR*/
@@ -143,7 +165,7 @@ nav.nav-tools .nav-tools__carrito-compras {
 /*PRIMER SECCION
 
 
-PAGINA DE BIENVENIDA
+PAGINA DE BIENVENIDA - WELCOME PAGE
 */
 main#main-container {
   background-color: #EEEDFF;
@@ -153,53 +175,60 @@ main#main-container section#section-welcome-page {
   flex-direction: column;
   margin-bottom: 0;
 }
-main#main-container section#section-welcome-page img.section-welcome-page__banner {
-  width: 100%;
-  height: 350px;
-}
-main#main-container section#section-welcome-page p.section-welcome-page__text {
-  display: flex;
-  padding: 10px;
-  margin-bottom: 0;
-  background-color: #EEEDFF;
-  color: #C31821;
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  justify-content: center;
-  text-align: center;
-}
 main#main-container section#section-welcome-page div.section-welcome-page__mayorista {
   display: flex;
+  font-size: 10px;
   width: 100%;
-  height: 100px;
-  flex-direction: row;
-  flex-wrap: wrap;
+  height: auto;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   align-items: center;
-  background-color: #737496;
+  background: linear-gradient(to bottom, #C31821, #EEEDFF);
+  padding: 2em 1em;
+  gap: 2em;
 }
 main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-text {
-  width: 50%;
+  width: 100%;
 }
 main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-text p {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 3em;
   margin: 0;
   color: #fff;
 }
 main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-button {
-  width: 50%;
+  width: 100%;
 }
 main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-button a input.button {
-  border: 2px solid #000;
-  border-radius: 30px;
-  padding: 5px 10px;
+  width: auto;
+  height: auto;
+  border: 2px solid #000000;
+  border-radius: 2em;
+  padding: 0.3em 0.6em;
+  font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #FFFFFF;
   background-color: #C31821;
+}
+main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-button a input.button:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+  font-weight: 700;
+}
+@media (min-width: 992px) {
+  main#main-container section#section-welcome-page div.section-welcome-page__mayorista {
+    flex-direction: row;
+    background: linear-gradient(to right, #C31821, #EEEDFF);
+  }
+  main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-text {
+    width: 50%;
+  }
+  main#main-container section#section-welcome-page div.section-welcome-page__mayorista div.section-welcome-page__mayorista-button {
+    width: 50%;
+  }
 }
 
 /*SEGUNDA SECCION
@@ -207,49 +236,39 @@ main#main-container section#section-welcome-page div.section-welcome-page__mayor
 
 CATEGORIAS*/
 section#section-category {
-  display: grid;
-  grid-template-areas: "menu" "tittle" "cont-prod";
-  gap: 20px;
-  padding-bottom: 100px;
-  padding-top: 50px;
-}
-section#section-category div.category__menu {
   display: flex;
-  width: 300px;
-  grid-area: "menu";
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 25px;
+  padding-bottom: 50px;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  align-items: center;
-  background-color: #DFD5D5;
-  gap: 10px;
-  padding: 5px;
-  border-radius: 25px;
+  background: linear-gradient(to bottom, #EEEDFF, #A5A7DD, #EEEDFF);
 }
-section#section-category div.category__menu img.img {
-  width: 20px;
-  height: 25px;
-}
-section#section-category div.category__menu h4.tittle {
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
-  margin: 0;
+section#section-category h2.product-tittle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-decoration: underline;
+  margin: 40px;
 }
 section#section-category h3.category__tittle {
-  text-align: center;
-  justify-content: center;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
   font-family: "Roboto", sans-serif;
-  font-size: 30px;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  font-size: 2rem;
+  color: #000000;
+  font-weight: 500;
+  margin: 0 20px;
+}
+@media (min-width: 992px) {
+  section#section-category h3.category__tittle {
+    align-self: flex-start;
+    margin-left: 20px;
+  }
 }
 section#section-category div.container-articulos {
   display: flex;
-  grid-area: "cont-prod";
-  justify-self: center;
   flex-direction: column;
-  width: 280px;
+  width: 17.5rem;
   justify-content: center;
   align-items: center;
   gap: 80px;
@@ -258,7 +277,7 @@ section#section-category div.container-articulos {
 section#section-category div.container-articulos div.container-articulos__imagen-y-titulo {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 17.5rem;
   height: 400px;
   align-items: center;
   gap: 20px;
@@ -277,34 +296,46 @@ section#section-category div.container-articulos div.container-articulos__imagen
   text-align: center;
 }
 @media (min-width: 992px) {
-  section#section-category .container-articulos {
+  section#section-category div.container-articulos {
     flex-direction: row;
+    width: 100%;
+    gap: unset;
+    justify-content: space-around;
   }
 }
 
-/*SECCION INFORMACION*/
-.centrar {
-  display: grid;
-  grid-template-areas: "pagos" "envios" "seguridad";
-  justify-content: center;
-  font-family: "Roboto", sans-serif;
-}
+/*TERCER SECCION
 
-.info-extra {
+
+INFORMACION
+*/
+section#tercer-section div.cont-info {
   display: flex;
   flex-direction: column;
-  width: 200px;
   align-items: center;
+  padding: 2rem 0;
   gap: 10px;
-  margin-top: 50px;
+  width: auto;
+}
+section#tercer-section div.cont-info div.info-extra {
+  display: flex;
+  width: 12.5rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
   border-radius: 20px;
-  padding: 30px 20px;
   text-align: center;
   font-size: 900;
 }
+@media (min-width: 992px) {
+  section#tercer-section div.cont-info {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 
 /*SECCION FOOTER*/
-.container-footer {
+footer#footer div.container-footer {
   display: flex;
   flex-direction: column;
   background-color: #777395;
@@ -313,8 +344,7 @@ section#section-category div.container-articulos div.container-articulos__imagen
   align-items: center;
   gap: 40px;
 }
-
-.container-footer__about-us {
+footer#footer div.container-footer div.container-footer__about-us {
   display: flex;
   flex-direction: column;
   font-size: 900;
@@ -322,26 +352,27 @@ section#section-category div.container-articulos div.container-articulos__imagen
   gap: 20px;
   margin-top: 30px;
 }
-
-.container-footer__contact {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  margin-bottom: 30px;
-}
-
-.container-footer__social-media {
+footer#footer div.container-footer div.container-footer__social-media {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
-
-.container-footer__social-media a {
+footer#footer div.container-footer div.container-footer__social-media a {
   width: auto;
 }
-
-.container-footer__social-media .logo {
+footer#footer div.container-footer div.container-footer__social-media a img.logo {
   width: 50px;
+}
+footer#footer div.container-footer div.container-footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+@media (min-width: 992px) {
+  footer#footer div.container-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
