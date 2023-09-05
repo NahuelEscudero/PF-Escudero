@@ -23,13 +23,26 @@ $font-bold: 700;
 
 
 
+
+
+.container:nth-child(1) {
+    height: 20vh;
+}
+
+.container:nth-child(1) {
+    height: 80vh;
+}
+
+
+
+
+
 /*HEADER*/
 
 header#header-cont {
     display: flex;
-    height: 100%;
-    flex-direction: column;
     width: 100%;
+    flex-direction: column;
     h3.envios-gratis {
         display: flex;
         flex: 5%;
@@ -417,6 +430,87 @@ footer#footer {
             flex-direction: row;
             justify-content: space-around;
         }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*>>>>>PRODUCTOS<<<<<*/
+
+
+
+
+
+/*SECCION LINKS A MARCAS*/
+
+section#section-links-category {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    height: 80vh;
+    background-color: rgba(120, 120, 120, 0.5);
+    div.container-link {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border: 2px solid black;
+        height: 100px;
+        position: relative;
+        
+        transition: background-color 1s ;
+        &:nth-of-type(1) {
+            background: linear-gradient(to right, $color-principal, $color-blanco);
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        &:nth-of-type(2) {
+            background: linear-gradient(to right, $color-blanco, green, $color-blanco);
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        &:nth-of-type(3) {
+            background: linear-gradient(to right, blue, $color-blanco);
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+        a.container-link-a{
+            $var-center: 100%/2;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            text-decoration: none;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            
+            
+            img.container-link__icon {
+                width: 60px;
+            }
+            h2.container-link__tittle {
+                text-align: center;
+                color: $color-negro;
+                font-size: 3.5rem;
+                margin-bottom: 0;
+                width: auto;
+            }
+
+        }
+        
     }
 }
 
