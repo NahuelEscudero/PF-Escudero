@@ -451,4 +451,85 @@ section#section-links-category div.container-link a.container-link-a h2.containe
   width: auto;
 }
 
+/*>>>>>>ACERCA DE<<<<<<*/
+/*SECCION QUIENES SOMOS*/
+section#section-quienes-somos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #EEEDFF;
+  gap: 30px;
+}
+section#section-quienes-somos h1.quienes-somos-tittle {
+  width: 90%;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  color: #C31821;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+section#section-quienes-somos img.quienes-somos-img {
+  width: 90%;
+}
+section#section-quienes-somos div.container-nosotros {
+  width: 90%;
+  font-family: "Roboto", sans-serif;
+}
+section#section-quienes-somos div.container-nosotros h2.container-nosotros-h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+section#section-quienes-somos div.container-nosotros p.container-nosotros-p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 992px) {
+  section#section-quienes-somos div.container-nosotros h2.container-nosotros-h2 {
+    font-size: 3rem;
+  }
+  section#section-quienes-somos div.container-nosotros p.container-nosotros-p {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  section#section-quienes-somos {
+    display: grid;
+    grid-template-areas: "tittle tittle" "img text";
+    gap: unset;
+    row-gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  section#section-quienes-somos h1.quienes-somos-tittle {
+    grid-area: tittle;
+  }
+  section#section-quienes-somos img.quienes-somos-img {
+    grid-area: img;
+  }
+  section#section-quienes-somos div.container-nosotros {
+    grid-area: text;
+  }
+}
+section#section-sobre-nosotros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(to right bottom, #737496, #7c7da3, #8587b0, #8f90bd, #989acb, #989acb, #989acb, #989acb, #8f90bd, #8587b0, #7c7da3, #737496);
+  gap: 2.3rem;
+  padding-top: 2rem;
+}
+section#section-sobre-nosotros div.container-about-us {
+  width: 90%;
+  color: #FFFFFF;
+}
+section#section-sobre-nosotros div.container-about-us h2.container-about-us__tittle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+section#section-sobre-nosotros div.container-about-us p.container-about-us__p {
+  font-size: 1.2rem;
+}
+
 /*# sourceMappingURL=styles.css.map */
