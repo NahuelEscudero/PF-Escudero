@@ -445,6 +445,11 @@ main#container-principal-contact section#location h2.location__title {
   font-size: 1.4rem;
   font-weight: 600;
 }
+@media (min-width: 992px) {
+  main#container-principal-contact section#location h2.location__title {
+    font-size: 1.9rem;
+  }
+}
 main#container-principal-contact section#location iframe.location__map {
   width: 100%;
   height: 300px;
@@ -516,6 +521,12 @@ main#container-principal-contact section#section-cont-form form.contact-form div
   font-size: 13.5px;
   font-weight: 800;
   text-decoration: none;
+  line-height: 2;
+}
+@media (min-width: 992px) {
+  main#container-principal-contact section#section-cont-form form.contact-form div.contact-form__input-group div.cont-form__legales {
+    gap: 15px;
+  }
 }
 main#container-principal-contact section#section-cont-form form.contact-form div.contact-form__input-group input.cont-form__btn {
   margin-top: 16px;
