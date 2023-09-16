@@ -555,10 +555,15 @@ section#title-section {
 section#title-section h1.contact-title {
   margin: 40px 0px;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 40px;
   font-weight: 600;
   color: #C31821;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+@media (min-width: 992px) {
+  section#title-section h1.contact-title {
+    font-size: 3.5rem;
+  }
 }
 
 section#section-links-category {
@@ -744,6 +749,7 @@ footer#footer div.container-footer div.container-footer__contact {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  padding-left: 10px;
 }
 @media (min-width: 992px) {
   footer#footer div.container-footer {

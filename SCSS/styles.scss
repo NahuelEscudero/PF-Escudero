@@ -640,10 +640,15 @@ section#title-section {
     h1.contact-title {
         margin: 40px 0px;
         text-align: center;
-        font-size: 3.5rem;
+        font-size: 40px;
         font-weight: $font-medium;
         color: $color-principal;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    @media (min-width: 992px) {
+        h1.contact-title {
+            font-size: 3.5rem;
+        }
     }
 }
 
@@ -850,6 +855,7 @@ footer#footer {
             display: flex;
             flex-direction: column;
             gap: 3px;
+            padding-left: 10px;
         }
     }
     @media (min-width: 992px) {
