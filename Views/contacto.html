@@ -7,18 +7,19 @@
         <!--Icono de la ventana-->
         <link rel="icon" href="../Imagenes/Iconos/iconogrupoumsa1.ico"> 
         <!--Link momentaneo al css de contacto-->
-        <link rel="stylesheet" href="../Styles/contacto.css">
-        <!--Link al css que se hizo gracias a Sass-->
+        <!--Link al css que se hizo de a Sass-->
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
         <!--Link a las fuentes (Roboto y Montserrat 300, 400, 500 y 700)-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <!--Link a Bootstrap-->
         <link rel="stylesheet" href="../css/bootstrap.css">
+        <!--Linl a Animate.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body class="container">
         <header id="header-cont">
-            <h3 class="envios-gratis">Envios gratis con la compra minima de $10000</h3>
+            <span class="envios-gratis">Envios gratis con la compra minima de $10000</span>
             <nav class="nav-tools" >
     
                 <div class="dropdown">
@@ -47,10 +48,10 @@
     
                 <div class="nav-tools__list">
                     <ul class="nav-tools__list-desktop">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../Views/contacto.html">Contacto</a></li>
-                        <li><a href="../Views/productos.html">Productos</a></li>
-                        <li><a href="../Views/acerca-de.html">Acerca de</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-1" href="../index.html">Inicio</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-2" href="../Views/contacto.html">Contacto</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-3" href="../Views/productos.html">Productos</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-4" href="../Views/acerca-de.html">Acerca de</a></li>
                     </ul>
                 </div>
     
@@ -60,72 +61,43 @@
             </nav>
         </header>
 
-        <main>
-            <section id="container-contacto">
-                <div class="contact-title">
-                    <h1 class="contact-title__text">CONTACTO</h1>
-                </div>
+        <main id="container-principal-contact">
+            <section id="title-section-contact">
+                <h1 class="contact-title-h1 animate__animated animate__bounce">CONTACTO</h1>
+            </section>
+
+            <section id="time-section">
                 <div class="horarios-de-atencion">
-                    <h2 class="horarios-de-atencion__tittle">Horarios de atencion:</h2>
-                    <h3 >Lunes a Viernes</h3>
+                    <h2 class="horarios-de-atencion__title">HORARIOS DE ATENCION</h2>
+                    <h4 class="horarios-de-atencion__txt">Lunes a Viernes</h4>
                     <p class="horarios-de-atencion__text">9 a 18hs</p>
-                    <h3 >Sabados</h3>
+                    <h4 class="horarios-de-atencion__txt">Sabados</h4>
                     <p class="horarios-de-atencion__text">9 a 12hs</p>
                 </div>
             </section>
             <section id="location">
-                <h2 class="location__tittle">Donde nos podes encontrar?</h2>
-                <iframe class="location__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.0705368649606!2d-68.83754212409715!3d-32.92273457068166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0960089ab82d%3A0x77857970e9a92c81!2sDistribuidora%20Grupo%20Umsa!5e0!3m2!1ses-419!2sar!4v1691960465826!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2 class="location__title">¿DONDE NOS PODES ENCONTRAR?</h2>
+                <iframe class="location__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3349.0705368649606!2d-68.83754212409715!3d-32.92273457068166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e0960089ab82d%3A0x77857970e9a92c81!2sDistribuidora%20Grupo%20Umsa!5e0!3m2!1ses-419!2sar!4v1691960465826!5m2!1ses-419!2sar" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
-            
-            <section id="cont-form" class="container-formulario">
-                <div class="container">
-                    <div class="row center">
-                        <div class="col-md-12">
-                            <div class="well well-sm">
-                                <form class="form-horizontal" method="post">
-                                    <fieldset>
-                                        <legend class="text-center header">CONTACTANOS</legend>
-                                        
-                                        <div class="form-group">
-                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-user bigicon"></i></span>
-                                            <div class="col-md-8">
-                                                <input id="lname" name="name" type="text" placeholder="Nombre y Apellido" class="form-control">
-                                            </div>
-                                        </div>
-                
-                                        <div class="form-group">
-                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-envelope-o bigicon"></i></span>
-                                            <div class="col-md-8">
-                                                <input id="email" name="email" type="text" placeholder="Email" class="form-control">
-                                            </div>
-                                        </div>
-                
-                                        <div class="form-group">
-                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-phone-square bigicon"></i></span>
-                                            <div class="col-md-8">
-                                                <input id="phone" name="phone" type="text" placeholder="Telefono" class="form-control">
-                                            </div>
-                                        </div>
-                
-                                        <div class="form-group">
-                                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
-                                            <div class="col-md-8">
-                                                <textarea class="form-control" id="message" name="message" placeholder="Dejanos tu mensaje..." rows="7"></textarea>
-                                            </div>
-                                        </div>
-                
-                                        <div class="form-group">
-                                            <div class="col-md-12 text-center">
-                                                <button type="submit" class="btn btn-danger btn-lg">Enviar</button>
-                                            </div>
-                                        </div>
-                                    </fieldset>
-                                </form>
-                            </div>
+            <section id="section-cont-form">
+                <form class="contact-form">
+                    <h2 class="contact-form-title">FORMULARIO</h2>
+                    <div class="contact-form__input-group">
+                        <label class="contact-form__input-group label" for="name">Nombre</label>
+                        <input class="contact-form__input-group text" type="text" name="name" placeholder="Nombre y Apellido">
+                        <label class="contact-form__input-group label" for="phone">Teléfono</label>
+                        <input class="contact-form__input-group text" type="tel" name="phone" id="phone" placeholder="N° Telefono">
+                        <label class="contact-form__input-group label" for="email">Email</label>
+                        <input class="contact-form__input-group text" type="email" name="email" id="email" placeholder="correo@ejemplo.com">
+                        <label class="contact-form__input-group label" for="message">Mensaje</label>
+                        <textarea class="contact-form__input-group msj" name="message" id="message" cols="20" rows="5" placeholder="Escriba su mensaje..."></textarea>
+                        <div class="cont-form__legales">
+                            <a class="cont-form__legales link" href="#">Política de privacidad</a>
+                            <a class="cont-form__legales link" href="#">Terminos y condiciones</a>
                         </div>
+                        <input class="cont-form__btn" type="submit" value="Enviar">
                     </div>
-                </div>
+                </form>
             </section>
         </main>
 

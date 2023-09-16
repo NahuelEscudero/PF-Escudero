@@ -17,10 +17,12 @@
         <link rel="stylesheet" href="../css/bootstrap.css">
         <!--Link a AOS-->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!--Linl a Animate.css-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
     <body class="container">
         <header id="header-cont">
-            <h3 class="envios-gratis">Envios gratis con la compra minima de $10000</h3>
+            <span class="envios-gratis">Envios gratis con la compra minima de $10000</span>
             <nav class="nav-tools" >
     
                 <div class="dropdown">
@@ -49,10 +51,10 @@
     
                 <div class="nav-tools__list">
                     <ul class="nav-tools__list-desktop">
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="../Views/contacto.html">Contacto</a></li>
-                        <li><a href="../Views/productos.html">Productos</a></li>
-                        <li><a href="../Views/acerca-de.html">Acerca de</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-1" href="../index.html">Inicio</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-2" href="../Views/contacto.html">Contacto</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-3" href="../Views/productos.html">Productos</a></li>
+                        <li><a class="nav-tools__list-desktop-link link-4" href="../Views/acerca-de.html">Acerca de</a></li>
                     </ul>
                 </div>
     
@@ -63,29 +65,33 @@
         </header>
 
         <main>
+                <section id="title-section">
+                    <h1 class="contact-title animate__animated animate__bounce">PRODUCTOS</h1>
+                </section>
+
             <section id="section-links-category">
                 <div class="container-link" data-aos="fade-right">
                     <a class="container-link-a" href="#dolphin-products">
                         <img class="container-link__icon" src="../Imagenes/Iconos/nadador.png" alt="Deportes">
-                        <h2 class="container-link__tittle">DOLPHIN</h2>
+                        <h2 class="container-link__title">DOLPHIN</h2>
                     </a>
                 </div>
                 <div class="container-link" data-aos="fade-left">
                     <a class="container-link-a" href="#teswell-products">
                         <img class="container-link__icon" src="../Imagenes/Iconos/jardineria.png" alt="Jardineria">
-                        <h2 class="container-link__tittle">TESWELL</h2>
+                        <h2 class="container-link__title">TESWELL</h2>
                     </a>
                 </div>
                 <div class="container-link" data-aos="fade-right">
                     <a class="container-link-a" href="#ohc-products">
                         <img class="container-link__icon" src="../Imagenes/Iconos/volante.png" alt="Repuestos de vehiculos">
-                        <h2 class="container-link__tittle">OHC</h2>
+                        <h2 class="container-link__title">OHC</h2>
                     </a>
                 </div>
             </section>
 
             <section id="section-category"">
-                <h3 id="dolphin-products" class="category__tittle">Articulos Deportivos y Fitness</h3>
+                <h3 id="dolphin-products" class="category__title">Articulos Deportivos y Fitness</h3>
                 <div class="container-articulos">
                     <div class="container-articulos__imagen-y-titulo">
                         <img  class="container-articulos__imagen-y-titulo imagen" src="../Imagenes/Deportes y Fitness/Pelota-Cobra-Naranja.webp" alt="Pelota Cobra Naranja ">
@@ -106,7 +112,7 @@
                         </h2>
                     </div>
                 </div>
-                <h3 id="teswell-products" class="category__tittle">Articulos de Industrias y Oficinas</h3>
+                <h3 id="teswell-products" class="category__title">Articulos de Industrias y Oficinas</h3>
                 <div class="container-articulos">
                     <div class="container-articulos__imagen-y-titulo">
                         <img  class="container-articulos__imagen-y-titulo imagen" src="../Imagenes/Industrias y Oficinas/Rodillos Hot Roll Codificadora.webp" alt="Rodillos Hot Roll">
@@ -128,7 +134,7 @@
                     </div>
                 </div>
 
-                <h3 id="ohc-products" class="category__tittle">Repuestos de Vehiculos</h3>
+                <h3 id="ohc-products" class="category__title">Repuestos de Vehiculos</h3>
                 <div class="container-articulos">
                     <div class="container-articulos__imagen-y-titulo">
                         <img  class="container-articulos__imagen-y-titulo imagen" src="../Imagenes/Accesorios para Vehiculos/12070.jpg" alt="Cable espiral 12070">
