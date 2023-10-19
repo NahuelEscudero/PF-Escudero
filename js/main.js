@@ -103,13 +103,13 @@ const compra = () => {
                         ingreso3 = 4;
                         ingreso1 = 4;
                     } else {
-                        comprarMas();
+                        comprarMas1();
                     }
                 }
                 ingreso3 = 0;
                 break;
             case 3:
-                while(ingreso3 != 4) {
+                while(ingreso4 != 4) {
                     let op2 = Number(prompt(`Que articulo desea comprar?:
                     1. Cañon Ozonizador
                     2. Placa Ozonizadora
@@ -138,7 +138,7 @@ const compra = () => {
                         ingreso4 = 4;
                         ingreso1 = 4;
                     } else {
-                        comprarMas();
+                        comprarMas2();
                     }
                 }
                 ingreso4 = 0;
@@ -174,6 +174,46 @@ const comprarMas = () => {
             break;
         case 2:
             ingreso2 = 4;
+            ingreso1 = 4;
+            break;
+        default:
+            alert("Ingrese una opcion valida");
+    }
+
+    return reCompra;
+}
+
+const comprarMas1 = () => {
+    let reCompra = Number(prompt(`Desea comprar algo mas? 
+    1-SI 
+    2-NO`));
+
+    switch(reCompra) {
+        case 1: 
+            ingreso3 = 4;
+            break;
+        case 2:
+            ingreso3 = 4;
+            ingreso1 = 4;
+            break;
+        default:
+            alert("Ingrese una opcion valida");
+    }
+
+    return reCompra;
+}
+
+const comprarMas2 = () => {
+    let reCompra = Number(prompt(`Desea comprar algo mas? 
+    1-SI 
+    2-NO`));
+
+    switch(reCompra) {
+        case 1: 
+            ingreso4 = 4;
+            break;
+        case 2:
+            ingreso4 = 4;
             ingreso1 = 4;
             break;
         default:
